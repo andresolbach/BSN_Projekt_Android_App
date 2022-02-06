@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/graph_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/display_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:id="@+id/graph_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/save_graph_button"
+                android:layout_toLeftOf="@id/save_graph_button"
+                android:hint="title"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/graph_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/save_graph_button"
+                android:layout_toEndOf="@id/save_graph_button"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/save_graph_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Save"
+                android:background="@color/colorPrimary"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/selected_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_below="@id/display_top" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Data Received"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"
+        android:id="@+id/no_graph_text"/>
+
+</RelativeLayout>

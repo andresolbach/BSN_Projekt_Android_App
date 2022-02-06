@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_user_input"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/not_connected"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/parameters_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp">
+        <RelativeLayout
+            android:id="@+id/parameters_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/integration_time_layout">
+
+                <TextView
+                    android:id="@+id/integration_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Text zum senden"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/integration_time_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_toEndOf="@id/integration_time_text"
+                    android:layout_toRightOf="@id/integration_time_text"
+                    android:gravity="end"
+                    android:hint="Schreibe hier"
+                    android:inputType="text"
+                    android:singleLine="false"
+                    android:textAlignment="textEnd" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/parameters_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/collect_sample_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:hint="Text an Rasperry Pi senden"
+                android:text="Text Absenden" />
+
+            <Button
+                android:id="@+id/click_to_speak_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Klicke zum sprechen"
+                android:translationY="100dp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/rasperry_pi_shutdown_button"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/mybutton"
+                android:hint="Rasperry Pi ausschalten"
+                android:text="Rasperry Pi ausschalten"
+                android:textColor="#FFFFFF"
+                android:translationY="200dp" />
+
+            <Button
+                android:id="@+id/rasperry_pi_reboot_button"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/myrebootbutton"
+                android:hint="Rasperry Pi neu starten"
+                android:text="Rasperry Pi neu starten"
+                android:textColor="#FFFFFF"
+                android:translationY="240dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
