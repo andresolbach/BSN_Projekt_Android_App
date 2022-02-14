@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragment_user_input"
-    tools:context=".MainActivity">
+    tools:context="android.example.bsn_projekt.MainActivity">
 
     <TextView
         android:id="@+id/textview"
@@ -39,7 +39,7 @@
                 android:id="@+id/integration_time_layout">
 
                 <TextView
-                    android:id="@+id/integration_time_text"
+                    android:id="@+id/text_to_send_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -49,16 +49,16 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/integration_time_edit"
+                    android:id="@+id/text_to_send"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_toEndOf="@id/integration_time_text"
-                    android:layout_toRightOf="@id/integration_time_text"
+                    android:layout_toEndOf="@id/text_to_send_text"
+                    android:layout_toRightOf="@id/text_to_send_text"
                     android:gravity="end"
                     android:hint="Schreibe hier"
-                    android:inputType="text"
+                    android:inputType="textMultiLine|text"
                     android:singleLine="false"
                     android:textAlignment="textEnd" />
             </RelativeLayout>
@@ -73,7 +73,7 @@
             android:layout_alignParentBottom="true">
 
             <Button
-                android:id="@+id/collect_sample_button"
+                android:id="@+id/send_text_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -92,7 +92,7 @@
                 android:id="@+id/rasperry_pi_shutdown_button"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:background="@drawable/mybutton"
+                android:background="@drawable/shutdown_buttons"
                 android:hint="Rasperry Pi ausschalten"
                 android:text="Rasperry Pi ausschalten"
                 android:textColor="#FFFFFF"
@@ -102,11 +102,31 @@
                 android:id="@+id/rasperry_pi_reboot_button"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:background="@drawable/myrebootbutton"
+                android:background="@drawable/shutdown_buttons"
                 android:hint="Rasperry Pi neu starten"
                 android:text="Rasperry Pi neu starten"
                 android:textColor="#FFFFFF"
                 android:translationY="240dp" />
+
+            <Button
+                android:id="@+id/rasperry_pi_open_chromium_button"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/other_buttons"
+                android:hint="Chrome öffnen"
+                android:text="Chrome öffnen"
+                android:textColor="#FFFFFF"
+                android:translationY="300dp" />
+
+            <Button
+                android:id="@+id/rasperry_pi_open_explorer_button"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/other_buttons"
+                android:hint="Explorer öffnen"
+                android:text="Explorer öffnen"
+                android:textColor="#FFFFFF"
+                android:translationY="340dp" />
 
         </RelativeLayout>
 

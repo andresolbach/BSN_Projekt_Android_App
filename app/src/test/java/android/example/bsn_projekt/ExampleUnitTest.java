@@ -1,4 +1,4 @@
-package android.example.ohiouniversityspectrometerdatacollection;
+package android.example.bsn_projekt;
 
 import org.junit.Test;
 

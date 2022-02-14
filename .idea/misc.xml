@@ -3,6 +3,42 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2345" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/drawable/ic_graph.xml" value="0.2345" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2345" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/drawable/ic_save_files.xml" value="0.2345" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/drawable/ic_user_input.xml" value="0.2345" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/drawable/mybutton.xml" value="0.2345" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/drawable/myrebootbutton.xml" value="0.2345" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/drawable/other_buttons.xml" value="0.2345" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/layout/dialog_bluetooth_devices.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/layout/fragment_files.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/layout/fragment_graph.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/layout/fragment_user_input.xml" value="0.33" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/layout/layout_listitem.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/layout/saved_graph_listitem.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/menu/bottom_navigation.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/menu/dialog_buttons.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/menu/menu_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/AndroidStudioProjects/BSN_Projekt/app/src/main/res/mipmap-anydpi-v26/ic_bluetooth_connection_menu.xml" value="0.2345" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/drawable-anydpi/ic_bluetooth_menu.xml" value="0.1375" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1375" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/drawable/ic_graph.xml" value="0.192" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1375" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/drawable/ic_save_files.xml" value="0.1375" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/drawable/ic_user_input.xml" value="0.192" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/drawable/mybutton.xml" value="0.1375" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/drawable/myrebootbutton.xml" value="0.1375" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/layout/dialog_bluetooth_devices.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/layout/fragment_files.xml" value="0.33" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/layout/fragment_graph.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/layout/fragment_user_input.xml" value="0.25" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/layout/layout_listitem.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/layout/saved_graph_listitem.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/menu/bottom_navigation.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Solba/Desktop/BSN_Projekt_Android_App/app/src/main/res/mipmap-anydpi-v26/ic_bluetooth_connection_menu.xml" value="0.192" />
         <entry key="..\:/Users/Solba/Desktop/oueecs_SpectralDataViewer-master/app/src/main/res/drawable-anydpi/ic_bluetooth_menu.xml" value="0.2175" />
         <entry key="..\:/Users/Solba/Desktop/oueecs_SpectralDataViewer-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2175" />
         <entry key="..\:/Users/Solba/Desktop/oueecs_SpectralDataViewer-master/app/src/main/res/drawable/ic_graph.xml" value="0.1985" />

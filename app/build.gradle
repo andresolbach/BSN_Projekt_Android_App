@@ -1,11 +1,13 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "android.example.ohiouniversityspectrometerdatacollection"
+        applicationId "android.example.bsn_projekt"
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdk 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

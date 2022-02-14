@@ -1,26 +1,12 @@
 <resources>
     <string name="app_name">Andres Rasperry Pi Projekt</string>
     <string name="connect_bluetooth">Mit Bluetooth Gerät verbinden (Raspberry Pi)</string>
-    <string name="spectrometer_settings_title">Home</string>
-    <!-- <string name="saved_files_title">Files</string> -->
-    <!-- <string name="graph_title">Graph</string> -->
-    <string name="toolbar_spectrometer_settings">Andres Rasperry Pi Projekt</string>
+    <string name="bottom_home_title">Home</string>
+    <string name="toolbar_title">Andres Rasperry Pi Projekt</string>
     <string name="bluetooth_device_blank_text">Bluetooth Device Blank Text</string>
-    <string name="dialog_cancel">Cancel</string>
-    <string name="dialog_scan">Scan</string>
-    <string name="dialog_confirm">Confirm</string>
+    <string name="dialog_cancel">Abbrechen</string>
+    <string name="dialog_scan">Scannen</string>
+    <string name="dialog_confirm">Bestätigen</string>
     <string name="bluetooth_devices">Bluetooth Geräte</string>
-    <!-- <string name="integration_time">Integration Time (ms):</string> -->
-    <!-- <string name="calibrate">Get Background</string> -->
-    <!-- <string name="get_spectra">Get Reference</string> -->
-    <!-- <string-array name="acquisition_modes">
-        <item>Absorbance</item>
-        <item>Reflectance</item>
-        <item>Transmission</item>
-        <item>Fluorescence</item>
-    </string-array> -->
     <string name="not_connected">Nicht verbunden</string>
-    <!-- <string name="boxcar_width">Boxcar Width:</string>
-    <string name="scans_to_average">Scans to Average:</string>
-    <string name="acquisition_mode">Acquisition Mode:</string> -->
 </resources>

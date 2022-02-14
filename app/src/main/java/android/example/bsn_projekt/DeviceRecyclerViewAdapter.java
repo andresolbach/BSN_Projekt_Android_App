@@ -1,7 +1,8 @@
-package android.example.ohiouniversityspectrometerdatacollection;
+package android.example.bsn_projekt;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
+import bsn_projekt.R;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -40,7 +41,6 @@ public class DeviceRecyclerViewAdapter extends RecyclerView.Adapter<DeviceRecycl
         RelativeLayout parentLayout;
         OnDeviceListener onDeviceListener;
 
-
         private ViewHolder(@NonNull View itemView, OnDeviceListener listener) {
             super(itemView);
             deviceName = itemView.findViewById(R.id.device_name);
@@ -70,13 +70,11 @@ public class DeviceRecyclerViewAdapter extends RecyclerView.Adapter<DeviceRecycl
     @Override
     public void onBindViewHolder(@NonNull final DeviceRecyclerViewAdapter.ViewHolder viewHolder, int i) {
         Log.d(TAG, "onBindViewHolder: called");
-
         if (mDevices.get(i).getName() == null) {
             viewHolder.deviceName.setText(mDevices.get(i).getAddress());
         } else {
             viewHolder.deviceName.setText(mDevices.get(i).getName());
         }
-
     }
 
     @Override
@@ -87,6 +85,4 @@ public class DeviceRecyclerViewAdapter extends RecyclerView.Adapter<DeviceRecycl
     public interface OnDeviceListener{
         void onDeviceClick(BluetoothDevice device);
     }
-
-
 }

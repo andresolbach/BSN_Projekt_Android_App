@@ -1,4 +1,4 @@
-package android.example.ohiouniversityspectrometerdatacollection;
+package android.example.bsn_projekt;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -7,14 +7,12 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.JsonWriter;
 import android.util.Log;
 
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.util.UUID;
 
 
@@ -196,7 +194,7 @@ public class BluetoothService {
         r.write(out);
     }
 
-    public void writeJson(String integrationTime) {
+    public void writeJson(String textToSend) {
         ConnectedThread r;
 
         synchronized (this) {
@@ -204,7 +202,7 @@ public class BluetoothService {
             r = mConnectedThread;
         }
 
-        r.writeJson(integrationTime);
+        r.writeJson(textToSend);
     }
 
     // Indicate that the connection attempt failed and notify the UI Activity
@@ -212,7 +210,7 @@ public class BluetoothService {
         // Send a failure message back to the Activity
         Message msg = mHandler.obtainMessage(Constants.MESSAGE_ERROR);
         Bundle bundle = new Bundle();
-        bundle.putString(Constants.TOAST, "Unable to connect device");
+        bundle.putString(Constants.TOAST, "Konnte keine Verbindung aufbauen");
         msg.setData(bundle);
         mHandler.sendMessage(msg);
 
@@ -229,7 +227,7 @@ public class BluetoothService {
         // Send a failure message back to the Activity
         Message msg = mHandler.obtainMessage(Constants.MESSAGE_ERROR);
         Bundle bundle = new Bundle();
-        bundle.putString(Constants.TOAST, "Lost Connection To Device");
+        bundle.putString(Constants.TOAST, "Verbindung zu Gerät verloren");
         msg.setData(bundle);
         mHandler.sendMessage(msg);
 
@@ -393,21 +391,11 @@ public class BluetoothService {
             }
         }
 
-        public void writeJson(String integrationTime) {
-            String message = "{\n  \"test_text\": " + integrationTime + "\n}";
+        public void writeJson(String textToSend) {
             try {
-                /*
-                JsonWriter writer = new JsonWriter(new OutputStreamWriter(mmOutStream, "UTF-8"));
-                writer.setIndent("  ");
-                writer.beginObject();
-                writer.name("integrationTime").value(integrationTime);
-                writer.name("isCalibration").value(isCalibration);
-                writer.endObject();
-                writer.close();
-                */
-                mmOutStream.write(message.getBytes());
+                mmOutStream.write(textToSend.getBytes());
 
-                mHandler.obtainMessage(Constants.MESSAGE_WRITE, -1, -1, message).sendToTarget();
+                mHandler.obtainMessage(Constants.MESSAGE_WRITE, -1, -1, textToSend).sendToTarget();
 
             } catch (IOException e) {
                 Log.e(TAG, "writeJson: ", e);

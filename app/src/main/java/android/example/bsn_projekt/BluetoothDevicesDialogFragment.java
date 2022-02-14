@@ -1,6 +1,7 @@
-package android.example.ohiouniversityspectrometerdatacollection;
+package android.example.bsn_projekt;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.arch.lifecycle.ViewModelProviders;
@@ -11,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import bsn_projekt.R;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -26,6 +28,7 @@ import android.view.View;
 
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Set;
 
 
@@ -59,11 +62,11 @@ public class BluetoothDevicesDialogFragment extends DialogFragment implements De
 
         // Get the layout inflater
         LayoutInflater inflater = requireActivity().getLayoutInflater();
-        View viewRoot = inflater.inflate(R.layout.dialog_bluetooth_devices, null);
+        View viewRoot = inflater.inflate(bsn_projekt.R.layout.dialog_bluetooth_devices, null);
 
         // Ask user to let the app access coarse location
         if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            ActivityCompat.requestPermissions(Objects.requireNonNull(getActivity()), new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
         }
 
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -71,9 +74,7 @@ public class BluetoothDevicesDialogFragment extends DialogFragment implements De
         Set<BluetoothDevice> bondedDevices = mBtAdapter.getBondedDevices();
 
         if (bondedDevices.size() > 0) {
-            for (BluetoothDevice device : bondedDevices) {
-                mDevices.add(device);
-            }
+            mDevices.addAll(bondedDevices);
         }
 
         if (mBtAdapter.isDiscovering()) {
@@ -94,7 +95,7 @@ public class BluetoothDevicesDialogFragment extends DialogFragment implements De
         mAdapter = new DeviceRecyclerViewAdapter(getContext(), mDevices, this);
         mRecyclerView.setAdapter(mAdapter);
 
-        mDeviceViewModel = ViewModelProviders.of(getActivity()).get(DeviceViewModel.class);
+        mDeviceViewModel = ViewModelProviders.of(Objects.requireNonNull(getActivity())).get(DeviceViewModel.class);
 
 
         // Inflate and set the layout for the dialog
@@ -133,6 +134,7 @@ public class BluetoothDevicesDialogFragment extends DialogFragment implements De
 
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @SuppressLint("NotifyDataSetChanged")
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
